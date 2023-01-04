@@ -15,38 +15,113 @@
   
   HTML graphics illustration
   -HTML5: Canvas
+
+  Types of Css 
+  - Inline Css (style as attribute on html element)
+  - Internal css (style as a tag/element on head)
+  - External Css (link as css file on head )
 -->
+    <style>
+        body {
+            margin: 0;
+        }
+        .header-top {
+            background-color: #1515F8;
+        }
+
+        .header-top a {
+            color: white;
+        }
+
+        .header-top {
+            display: flex;
+            justify-content: space-between;
+            padding: 10px;
+            color: white;
+        }
+
+        .contact-teaser a {
+            padding: 0 30px;
+        }
+        .contact-teaser a:first-of-type{
+            padding-left: 0px;
+
+        }
+
+        .social-links {
+            list-style-type: none;
+            margin-top: 0;
+            margin-bottom: 0;
+            padding-left: 0;
+        }
+        .social-links,
+        .extra-links,
+        .social-links li {
+
+            display:inline-block;
+            padding: 0 12px;
+        }
+
+        .social-links svg,
+        .extra-links svg{
+            max-height: 20px;
+            max-width: 20px;
+        }
+    </style>
+    <link rel="stylesheet" href="./main.css" type="text/css"/>
 </head>
 
 <body>
-    <header class="header">
+    <!-- 
+        header with inline css
+        <header class="header" id="header" style="background-color: blue; color: white;"> -->
+
+    <header class="header" id="header">
+
         <div class="header-top">
             <div class="contact-teaser">
-                <a href="tel:9843330697" title="9843330697">9843330697</a>
-                <a href="mailto:ktaunknown1998@gmail.com" title="ktaunknown1998@gmail.com">ktaunknown1998@gmail.com</a>
+                <a href="tel:9843330697" title="9843330697" style="color: white;">9843330697</a>|
+                <a href="mailto:ktaunknown1998@gmail.com" title="ktaunknown1998@gmail.com"
+                    style="color: white;">ktaunknown1998@gmail.com</a>
             </div>
-            <div class="social-links"></div>
+            <div class="social-links">
 
-            <ul class="social-links">
-                <li> <a href="#" title="facebook">
-                        <img src="./img/fb.svg" alt="fb" />
-                    </a></li>
-                <li><a href="#" title="twitter">
-                        <img src="./img/tw.svg" alt="twitter" />
-                    </a></li>
-                <li><a href="#" title="email">
-                        <img src="./img/mail.svg" alt="email" />
-                    </a></li>
-            </ul>
-            <div class="extra-links"></div>
-
-        </div>
-        <div class="header-main">
-
-            <a href="#" title="Forward To Friend">
-                <img src="./img/forward.svg" alt="">
-                <span>Forward To Friend</span>
-            </a>
+                <ul class="social-links">
+                    <li> <a href="#" title="facebook">
+                        <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M19 6H24V0H19C15.14 0 12 3.14 12 7V10H8V16H12V32H18V16H23L24 10H18V7C18 6.458 18.458 6 19 6Z" fill="currentColor"/>
+                            </svg>
+                        </a></li>
+                    <li><a href="#" title="twitter">
+                        <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <g clip-path="url(#clip0_10_12)">
+                            <path d="M32 7.075C30.825 7.6 29.556 7.95 28.231 8.106C29.587 7.293 30.625 6.006 31.118 4.475C29.849 5.225 28.443 5.775 26.949 6.069C25.749 4.794 24.043 4 22.155 4C18.53 4 15.592 6.938 15.592 10.563C15.592 11.075 15.648 11.575 15.761 12.057C10.305 11.782 5.46702 9.169 2.23002 5.195C1.66702 6.164 1.34302 7.295 1.34302 8.495C1.34302 10.77 2.49902 12.782 4.26202 13.958C3.18702 13.927 2.17502 13.627 1.28702 13.139C1.28702 13.164 1.28702 13.195 1.28702 13.22C1.28702 16.401 3.55002 19.058 6.55602 19.657C6.00602 19.807 5.42502 19.888 4.82502 19.888C4.40002 19.888 3.99402 19.844 3.58802 19.769C4.42602 22.375 6.85102 24.275 9.71902 24.332C7.46902 26.094 4.64402 27.145 1.56302 27.145C1.03202 27.145 0.513019 27.114 -0.00598145 27.051C2.90702 28.92 6.35602 30.001 10.063 30.001C22.138 30.001 28.744 19.995 28.744 11.32C28.744 11.033 28.738 10.751 28.725 10.47C30.006 9.551 31.119 8.395 32 7.076V7.075Z" fill="currentColor"/>
+                            </g>
+                            <defs>
+                            <clipPath id="clip0_10_12">
+                            <rect width="32" height="32" fill="white"/>
+                            </clipPath>
+                            </defs>
+                            </svg>
+                            
+                        </a></li>
+                    <li><a href="#" title="email">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M23.1562 7.73438C22.9219 7.54688 17.9062 3.51562 16.8281 2.625C15.7969 1.82812 14.0156 0 12 0C9.9375 0 8.20312 1.78125 7.125 2.625C6 3.5625 0.984375 7.59375 0.796875 7.73438C0.28125 8.15625 0 8.76562 0 9.46875V21.75C0 23.0156 0.984375 24 2.25 24H21.75C22.9688 24 24 23.0156 24 21.75V9.46875C24 8.76562 23.6719 8.15625 23.1562 7.73438ZM21.75 21.4688C21.75 21.6562 21.6094 21.75 21.4688 21.75H2.53125C2.34375 21.75 2.25 21.6562 2.25 21.4688V9.60938C2.25 9.51562 2.25 9.42188 2.34375 9.375C3.09375 8.76562 7.45312 5.29688 8.53125 4.40625C9.375 3.70312 10.875 2.25 12 2.25C13.0781 2.25 14.5781 3.75 15.4219 4.40625C16.5 5.29688 20.8594 8.76562 21.6094 9.375C21.7031 9.42188 21.75 9.51562 21.75 9.60938V21.4688ZM20.25 12.7031L19.5 11.8125C19.3125 11.5781 18.9844 11.5312 18.7031 11.7656C17.3906 12.8438 15.9844 13.9688 15.4219 14.3906C14.5781 15.0938 13.0781 16.5 12 16.5C10.875 16.5 9.375 15.0469 8.53125 14.3906C7.96875 13.9688 6.5625 12.8438 5.25 11.7656C4.96875 11.5312 4.64062 11.5781 4.45312 11.8125L3.70312 12.7031C3.51562 12.9375 3.5625 13.3125 3.79688 13.5C5.15625 14.5781 6.60938 15.75 7.125 16.1719C8.15625 16.9688 9.9375 18.75 12 18.75C14.0156 18.75 15.75 17.0156 16.8281 16.1719C17.3438 15.7031 18.7969 14.5781 20.1562 13.5C20.3906 13.3125 20.4375 12.9375 20.25 12.7031Z" fill="currentColor"/>
+                            </svg>
+                            
+                        </a></li>
+                </ul>|
+                <div class="extra-links">
+                    <a href="#" title="Forward To Friend">
+                        <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M8.19201 0C4.63801 6.439 4.039 16.259 18 15.932V8L30 20L18 32V24.238C1.282 24.674 -0.579995 9.481 8.19201 0Z" fill="currentColor"/>
+                            </svg>
+                            
+                        <span>Forward To Friend</span>
+                    </a>
+                </div>
+            </div>
         </div>
         <div class="header-main">
             <a href="/" title="School of Information Technology" class="SIT-Logo">
@@ -63,6 +138,16 @@
 
         </div>
     </header>
+
+<figure class="banner">
+    <img src="./Uploads/ABCXYZ.jpg" alt="Mountain"/>
+    <figcaption class="banner-content">
+    <h2 class="banner-title">
+    Exploring Nepal <strong>Adventure</strong>
+    </h2>
+    <a href="#" title="Read More" class="button">Read More</a>
+</figcaption>
+</figure>
 </body>
 
 </html>
